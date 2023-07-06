@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: Galkin
+      changes:
+        - createTable:
+            tableName: Player
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: namePlayer
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+

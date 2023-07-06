@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Galkin
+      changes:
+        - createTable:
+            tableName: lot
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: state
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: id_player
+                  type: int
+                  constraints:
+                    foreignKeyName: player

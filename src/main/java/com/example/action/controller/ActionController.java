@@ -1,14 +1,13 @@
-package controller;
+package com.example.action.controller;
 
-import DTO.FullInfoLot;
-import DTO.infoPlayer;
+import com.example.action.DTO.FullInfoLot;
+import com.example.action.DTO.InfoPlayer;
 import lombok.RequiredArgsConstructor;
-import model.Lot;
+import com.example.action.model.Lot;
 import org.springframework.web.bind.annotation.*;
-import service.ActionService;
+import com.example.action.service.ActionService;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/lot")
@@ -17,8 +16,9 @@ public class ActionController {
 
     private final ActionService actionService;
 
+
     @GetMapping("{id}first")
-    public List<infoPlayer> infoFirstPlayer(@PathVariable Integer id) {
+    public List<InfoPlayer> infoFirstPlayer(@PathVariable Integer id) {
         return null;
     }
 
@@ -29,7 +29,7 @@ public class ActionController {
 
     @GetMapping("{id}")
     public List<FullInfoLot> fullInfoLot(@PathVariable Integer id) {
-        return null;
+        return actionService.fullInfoLotList(id);
     }
     @PostMapping("{id}start")
     public void tradeLot(@PathVariable Integer id){
