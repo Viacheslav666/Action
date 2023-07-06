@@ -16,9 +16,9 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Player {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_player;
-    private String namePlayer;
+    private String player;
 
 
 }

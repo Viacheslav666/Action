@@ -1,5 +1,6 @@
 package com.example.action.DTO;
 
+
 import com.example.action.model.Lot;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FullInfoLot {
-
     private String name;
     private int price;
 

@@ -4,17 +4,17 @@ databaseChangeLog:
       author: Galkin
       changes:
         - createTable:
-            tableName: Player
+            tableName: player
             columns:
               - column:
-                  name: id
+                  name: id_player
                   type: int
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: namePlayer
+                  name: player
                   type: varchar(255)
                   constraints:
                     nullable: false
