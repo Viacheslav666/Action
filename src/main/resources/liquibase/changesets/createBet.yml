@@ -4,18 +4,22 @@ databaseChangeLog:
       author: Galkin
       changes:
         - createTable:
-            tableName: player
+            tableName: bet
             columns:
               - column:
-                  name: id_player
+                  name: id_bidder
                   type: int
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: player
+                  name: name_bidder
                   type: varchar(255)
                   constraints:
                     nullable: false
-
+              - column:
+                  name: bid_Date
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false

@@ -14,22 +14,32 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: name
+                  name: status
+                  type: TINYINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
                   type: varchar(255)
                   constraints:
                     nullable: false
               - column:
-                  name: price
+                  name: description
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: start_Price
                   type: int
                   constraints:
                     nullable: false
               - column:
-                  name: state
-                  type: boolean
+                  name: bid_Price
+                  type: int
                   constraints:
                     nullable: false
               - column:
-                  name: id_player
+                  name: id_bidder
                   type: int
                   constraints:
-                    foreignKeyName: player
+                    foreignKeyName: bet
