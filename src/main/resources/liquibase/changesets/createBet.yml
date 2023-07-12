@@ -19,7 +19,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: bid_Date
+                  name: bid_date
                   type: TIMESTAMP
                   constraints:
                     nullable: false

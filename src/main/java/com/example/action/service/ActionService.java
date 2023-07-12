@@ -9,13 +9,13 @@ import java.io.IOException;
 import java.util.List;
 
 public interface ActionService {
- public FullInfoLot getEmployeeFullLotById(int id);
- public void startLot(int id);
- public void placeABet(int id, String bidderName);
- public void stopLot(int id);
- public Lot createLot(String title, String description, int startPrice, int bidPrice);
- public List<Lot> getLotsByStatusAndPage(Status status, int page);
- public String getFrequentBidder(int id);
- public Bet getFirstBidder(int id);
- public String exportLots() throws IOException;
+ FullInfoLot getEmployeeFullLotById(int id);
+void startLot(int id);
+ void placeABet(int id, String bidderName);
+void stopLot(int id);
+ Lot createLot(String title, String description, int startPrice, int bidPrice);
+ List<Lot> getLotsByStatusAndPage(Status status, int page);
+ String getFrequentBidder(int id);
+  Bet getFirstBidder(int id);
+  String exportLots() throws IOException;
 }

@@ -18,7 +18,7 @@ public class Lot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
+    @Enumerated(EnumType.STRING)
     private Status status;
     @Min(3)
     @Max(64)
@@ -27,14 +27,23 @@ public class Lot {
     @Max(4096)
     private String description;
     @Min(1)
-    @Column(name = "start_Price")
+    @Column(name = "start_price")
     private int startPrice;
     @Min(1)
-    @Column(name = "bid_Price")
+    @Column(name = "bid_price")
     private int bidPrice;
+
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_bidder")
     private List<Bet> id_bidder;
+    public Lot(Integer id, int statusId, String title, String description, int startPrice, int bidPrice) {
+        this.id = id;
+        this.status = getStatus(statusId);
+        this.title = title;
+        this.description = description;
+        this.startPrice = startPrice;
+        this.bidPrice = bidPrice;
+    }
     private Status getStatus(int statusId) {
         Status status;
         if(statusId == 1){
